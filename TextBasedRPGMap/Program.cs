@@ -35,17 +35,23 @@ namespace TextBasedRPGMap
 
         static void DisplayMap()
         {
+            Console.Write("+++++++++++++++++++++++++++++++");
             for (int y = 0; y < 12; y++)
             {
+                Console.Write("+");
                 Console.WriteLine();
                 Console.Write("+");
                 for (int x = 0; x < 30; x++)
                 {
+  
                     Console.Write(map[y, x]);
-
+                    
                 }
+                
             }
 
+            Console.WriteLine("+");
+            Console.Write("++++++++++++++++++++++++++++++++");
         }
 
     }
