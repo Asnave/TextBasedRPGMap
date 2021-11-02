@@ -8,9 +8,8 @@ namespace TextBasedRPGMap
 {
     class Program
     {
-        static int x = 0;
-        static int y = 0;
-        static char[,] map = new char[12,30] // dimensions defined by following data:
+
+        static char[,] map = new char[,] // dimensions defined by following data:
     {
         {'^','^','^','\'','\'','\'','\'','\'','\'','\'','\'','\'','\'','\'','\'','\'','\'','\'','\'','\'','\'','\'','\'','\'','\'','\'','\'','\'','\'','\''},
         {'^','^','\'','\'','\'','\'','*','*','\'','\'','\'','\'','\'','\'','\'','\'','\'','\'','\'','\'','\'','\'','\'','\'','~','~','~','\'','\'','\''},
@@ -36,11 +35,13 @@ namespace TextBasedRPGMap
 
         static void DisplayMap()
         {
-            for (int y = 0; y < 12; y++)
+            for (int y = 0; y < 11; y++)
             {
-                for (int x = 0; x < 30; x++)
+                Console.WriteLine();
+                for (int x = 0; x < 29; x++)
                 {
-                    
+                    Console.Write(map[y, x]);
+
                 }
             }
 
