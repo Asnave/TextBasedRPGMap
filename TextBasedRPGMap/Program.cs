@@ -33,6 +33,11 @@ namespace TextBasedRPGMap
 
         }
 
+
+        static void MapScaler(int scale)
+        {
+
+        }
         static void DisplayMap()
         {
             Console.Write("+++++++++++++++++++++++++++++++");
