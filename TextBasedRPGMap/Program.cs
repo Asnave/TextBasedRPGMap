@@ -35,10 +35,11 @@ namespace TextBasedRPGMap
 
         static void DisplayMap()
         {
-            for (int y = 0; y < 11; y++)
+            for (int y = 0; y < 12; y++)
             {
                 Console.WriteLine();
-                for (int x = 0; x < 29; x++)
+                Console.Write("+");
+                for (int x = 0; x < 30; x++)
                 {
                     Console.Write(map[y, x]);
 
