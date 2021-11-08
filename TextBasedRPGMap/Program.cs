@@ -27,7 +27,7 @@ namespace TextBasedRPGMap
         static void Main(string[] args)
         {
             
-            MapScaler(5);
+            MapScaler(2);
             Console.ReadKey(true);
 
 
@@ -37,14 +37,21 @@ namespace TextBasedRPGMap
         static void MapScaler(int scale)
         {
             Console.Write("+");
-            for (int border = 0; border < map.GetLength(0) * scale; border++)
+            for (int topBorder = 0; topBorder < 30 * scale; topBorder++)
             {
                 Console.Write("-");
             }
             Console.WriteLine("+");
             
             DisplayMap(scale);
-            
+
+            Console.Write("+");
+            for (int bottomBorder = 0; bottomBorder < 30 * scale; bottomBorder++)
+            {
+                Console.Write("-");
+            }
+            Console.WriteLine("+");
+
         }
         static void DisplayMap(int scale)
         {
