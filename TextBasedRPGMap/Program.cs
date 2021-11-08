@@ -26,8 +26,18 @@ namespace TextBasedRPGMap
     };
         static void Main(string[] args)
         {
-            
-            MapScaler(2);
+            Console.WriteLine("       +----LEGEND----+");
+            Console.WriteLine("       | ^ = Mountain |");
+            Console.WriteLine("       | ' =  Grass   |");
+            Console.WriteLine("       | ~ =  Water   |");
+            Console.WriteLine("       | * =  Trees   |");
+            Console.WriteLine("       +--------------+");
+            Console.WriteLine("");
+            Console.WriteLine("Scale X1");
+            MapScaler(1);
+            Console.WriteLine("");
+            Console.WriteLine("Scale X5");
+            MapScaler(5);
             Console.ReadKey(true);
 
 
@@ -37,7 +47,7 @@ namespace TextBasedRPGMap
         static void MapScaler(int scale)
         {
             Console.Write("+");
-            for (int topBorder = 0; topBorder < 30 * scale; topBorder++)
+            for (int topBorder = 0; topBorder < map.GetLength(1)*scale; topBorder++)
             {
                 Console.Write("-");
             }
@@ -46,7 +56,7 @@ namespace TextBasedRPGMap
             DisplayMap(scale);
 
             Console.Write("+");
-            for (int bottomBorder = 0; bottomBorder < 30 * scale; bottomBorder++)
+            for (int bottomBorder = 0; bottomBorder < map.GetLength(1)*scale; bottomBorder++)
             {
                 Console.Write("-");
             }
@@ -56,12 +66,12 @@ namespace TextBasedRPGMap
         static void DisplayMap(int scale)
         {
             
-            for (int y = 0; y < 12; y++)
+            for (int y = 0; y < map.GetLength(0); y++)
             {
                 for (int yy = 0; yy < scale; yy++)
                 {
                     Console.Write("|");
-                    for (int x = 0; x < 30; x++)
+                    for (int x = 0; x < map.GetLength(1); x++)
                     {
                         for (int xx = 0; xx < scale; xx++)
                         {
