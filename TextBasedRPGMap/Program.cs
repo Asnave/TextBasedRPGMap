@@ -36,6 +36,9 @@ namespace TextBasedRPGMap
             Console.WriteLine("Scale X1");
             MapScaler(1);
             Console.WriteLine("");
+            Console.WriteLine("Scale X2");
+            MapScaler(2);
+            Console.WriteLine("");
             Console.WriteLine("Scale X5");
             MapScaler(5);
             Console.ReadKey(true);
