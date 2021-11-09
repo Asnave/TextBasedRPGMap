@@ -88,6 +88,7 @@ namespace TextBasedRPGMap
                 Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.BackgroundColor = ConsoleColor.Yellow;
             }
+           
         }
 
         static void MapScaler(int scale)
@@ -123,6 +124,7 @@ namespace TextBasedRPGMap
                         {
                             ChangeColor(x, y);
                             Console.Write(map[y, x]);
+                            Console.ResetColor();
                         }
                     }
                     Console.WriteLine("|");
