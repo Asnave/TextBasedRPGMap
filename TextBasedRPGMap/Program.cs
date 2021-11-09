@@ -8,6 +8,7 @@ namespace TextBasedRPGMap
 {
     class Program
     {
+        
         static int y = 0;
         static int x = 0;
 
@@ -47,14 +48,12 @@ namespace TextBasedRPGMap
             Console.WriteLine("       | * =  Trees   |");
             Console.WriteLine("       +--------------+");
             Console.WriteLine("");
-            Console.WriteLine("Scale X1");
             MapScaler(1);
             Console.WriteLine("");
-            Console.WriteLine("Scale X2");
             MapScaler(2);
             Console.WriteLine("");
-            Console.WriteLine("Scale X5");
             MapScaler(5);
+            Console.WriteLine("");
             Console.ReadKey(true);
 
 
@@ -93,6 +92,7 @@ namespace TextBasedRPGMap
 
         static void MapScaler(int scale)
         {
+            Console.WriteLine("Scale: " + scale + "X");
             Console.Write("╔");
             for (int topBorder = 0; topBorder < map.GetLength(1)*scale; topBorder++)
             {
