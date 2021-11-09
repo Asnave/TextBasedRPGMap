@@ -69,8 +69,8 @@ namespace TextBasedRPGMap
             }
             if (map[y, x] == '^')
             {
-                Console.ForegroundColor = ConsoleColor.Gray;
-                Console.BackgroundColor = ConsoleColor.Gray;
+                Console.ForegroundColor = ConsoleColor.DarkGray;
+                Console.BackgroundColor = ConsoleColor.DarkGray;
             }
             if (map[y, x] == '*')
             {
@@ -93,21 +93,21 @@ namespace TextBasedRPGMap
 
         static void MapScaler(int scale)
         {
-            Console.Write("+");
+            Console.Write("╔");
             for (int topBorder = 0; topBorder < map.GetLength(1)*scale; topBorder++)
             {
-                Console.Write("-");
+                Console.Write("═");
             }
-            Console.WriteLine("+");
+            Console.WriteLine("╗");
             
             DisplayMap(scale);
 
-            Console.Write("+");
+            Console.Write("╚");
             for (int bottomBorder = 0; bottomBorder < map.GetLength(1)*scale; bottomBorder++)
             {
-                Console.Write("-");
+                Console.Write("═");
             }
-            Console.WriteLine("+");
+            Console.WriteLine("╝");
 
         }
         static void DisplayMap(int scale)
@@ -117,7 +117,7 @@ namespace TextBasedRPGMap
             {
                 for (int yy = 0; yy < scale; yy++)
                 {
-                    Console.Write("|");
+                    Console.Write("║");
                     for ( x = 0; x < map.GetLength(1); x++)
                     {
                         for (int xx = 0; xx < scale; xx++)
@@ -127,14 +127,10 @@ namespace TextBasedRPGMap
                             Console.ResetColor();
                         }
                     }
-                    Console.WriteLine("|");
+                    Console.WriteLine("║");
                 }
             }
-
-            // Change Color 
             
-
-
         }
 
     }
